@@ -10,7 +10,11 @@ const morgan = require("morgan");
 server.use(morgan("dev"));
 
 // handle application/json requests
-server.use(express.json());
+const bodyParser = require("body-parser");
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: true }));
+
+server.use(express.static("public"));
 
 // here's our API
 server.use("/api", require("./api"));

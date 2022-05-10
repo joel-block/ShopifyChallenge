@@ -29,6 +29,7 @@ warehousesRouter.post("/", async (req, res, next) => {
         });
       }
     } else {
+      res.status(400);
       next({
         name: "WarehouseNameTaken",
         message: "That warehouse name already exists.",

@@ -15,6 +15,7 @@ productsRouter.get("/", async (req, res, next) => {
 productsRouter.post("/", async (req, res, next) => {
   const { name, description, price } = req.body;
   if (!name || !price) {
+    res.status(400);
     next({
       name: "RequiredFields",
       message: "Products must at least have a name and price.",
@@ -26,7 +27,7 @@ productsRouter.post("/", async (req, res, next) => {
         description,
         price,
       });
-      
+
       res.send({ message: "Successfully added product!", product });
     } catch (error) {
       next(error);
