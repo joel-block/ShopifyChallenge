@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import UpdateQuantity from "./UpdateQuantity";
-import DeleteProductLocation from "./DeleteProductLocation";
+import { UpdateQuantity, DeleteProductLocation } from "./";
 
 const SingleLocation = ({ warehouse }) => {
   const [clickedEdit, setClickedEdit] = useState(false);

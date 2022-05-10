@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { fetchAllProducts, fetchWarehouses } from "./AJAXFunctions";
-import ProductContext from "./ProductContext";
+import { fetchAllProducts, fetchWarehouses } from "../AJAXFunctions";
+import { ProductContext } from "./";
 
 const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);

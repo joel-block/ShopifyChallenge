@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import useProduct from "../useProduct";
+import { useProduct } from "../../context";
 import { toast } from "react-toastify";
-import { addNewProduct } from "../AJAXFunctions";
+import { addNewProduct } from "../../AJAXFunctions";
 
 const CreateProduct = () => {
   const [name, setName] = useState("");

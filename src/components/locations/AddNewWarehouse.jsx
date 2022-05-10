@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import useProduct from "../useProduct";
-import { addWarehouse } from "../AJAXFunctions";
+import { useProduct } from "../../context";
+import { addWarehouse } from "../../AJAXFunctions";
 import { toast } from "react-toastify";
 
 const AddNewWarehouse = () => {

@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import SingleLocation from "./SingleLocation";
-import UpdateProduct from "./UpdateProduct";
-import AddQuantity from "./AddQuantity";
-import DeleteProduct from "./DeleteProduct";
-import useProduct from "../useProduct";
+import { SingleLocation } from "../locations";
+import { UpdateProduct, AddQuantity, DeleteProduct } from "./";
+import { useProduct } from "../../context";
 
 const SingleProduct = ({ product }) => {
   const [clickedUpdate, setClickedUpdate] = useState(false);

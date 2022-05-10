@@ -1,9 +1,10 @@
 import React from "react";
 import { ToastContainer } from "react-toastify";
-import useProduct from "../useProduct";
 import "react-toastify/dist/ReactToastify.css";
 import "../style/App.css";
-import { CreateProduct, SingleProduct, AddNewWarehouse } from "./";
+import { useProduct } from "../context";
+import { CreateProduct, SingleProduct } from "./products";
+import { AddNewWarehouse } from "./locations";
 
 const App = () => {
   const { products } = useProduct();

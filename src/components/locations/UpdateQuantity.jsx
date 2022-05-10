@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import useProduct from "../useProduct";
-import { updateProductQuantity } from "../AJAXFunctions";
+import { useProduct } from "../../context";
+import { updateProductQuantity } from "../../AJAXFunctions";
 import { toast } from "react-toastify";
 
 const UpdateQuantity = ({ warehouse, setClickedEdit }) => {

@@ -1,6 +1,6 @@
 import React from "react";
-import useProduct from "../useProduct";
-import { deleteProduct } from "../AJAXFunctions";
+import { useProduct } from "../../context";
+import { deleteProduct } from "../../AJAXFunctions";
 import { toast } from "react-toastify";
 
 const DeleteProduct = ({ product }) => {

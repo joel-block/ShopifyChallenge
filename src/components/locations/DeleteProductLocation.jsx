@@ -1,7 +1,7 @@
 import React from "react";
 import { toast } from "react-toastify";
-import { removeProductLocation } from "../AJAXFunctions";
-import useProduct from "../useProduct";
+import { removeProductLocation } from "../../AJAXFunctions";
+import { useProduct } from "../../context";
 
 const DeleteProductLocation = ({ warehouse }) => {
   const { products, setProducts } = useProduct();
@@ -9,10 +9,7 @@ const DeleteProductLocation = ({ warehouse }) => {
   async function handleClick() {
     try {
       const deleted = await removeProductLocation(warehouse.productLocationId);
-      if (
-        deleted.message ===
-        "Product successfully deleted from warehouse."
-      ) {
+      if (deleted.message === "Product successfully deleted from warehouse.") {
         let filteredProducts = products.map((product) => {
           if (product.id === deleted.productLocation.productId) {
             product.totalInventory =

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import useProduct from "../useProduct";
-import { addProductQuantity } from "../AJAXFunctions";
+import { useProduct } from "../../context";
+import { addProductQuantity } from "../../AJAXFunctions";
 import { toast } from "react-toastify";
 
 const AddQuantity = ({ product, setClickedAdd }) => {
