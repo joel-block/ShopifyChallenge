@@ -4,7 +4,7 @@
 // between individual environments.
 
 const production = {
-  url: "https://amiibay-joel.herokuapp.com/api",
+  url: "https://joel-shopify-challenge.herokuapp.com/api",
 };
 
 const development = {
