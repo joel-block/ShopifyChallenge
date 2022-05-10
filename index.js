@@ -14,7 +14,8 @@ const bodyParser = require("body-parser");
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
-server.use(express.static("public"));
+const path = require("path");
+server.use(express.static(path.join(__dirname, "build")));
 
 // here's our API
 server.use("/api", require("./api"));
